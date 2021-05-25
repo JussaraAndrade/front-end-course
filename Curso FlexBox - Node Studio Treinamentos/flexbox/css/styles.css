@@ -26,7 +26,7 @@
 
         nowrap | wrap | wrap-reverse
     */
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
 /*==============================================================================================*/
     /*Defini os valores flex-direction e do flex-wrap */
@@ -78,7 +78,7 @@
 
         Obs: para o stretch funcionar tem que remover altura do item: height: 30px;
     */
-    align-content: stretch;
+    align-content: flex-start;
 
 }
 
@@ -87,6 +87,68 @@
     color: #fff;
     padding: 20px;
     margin: 5px;
-    width: 200px;
+    height: 30px;
+
+    /* propriedade importante
+
+        flex-grow; o valor padrão dela é 0. Essa propriedade está relacionado com a largura desses itens.
+        Acabou de dizer que todos os items tem o flex
+
+         flex-grow: 1;
+    */
+   
+
+    /*flex-shrink; está relacionado com a capacidade de redução do item
+         flex-shrink: 1;
+    */
+   
+
+    /* flex-basis;  largura inicial dos itens
+         flex-basis: 300px;
+    */
+   
+
+    /*flex; forma resumida de escrever essas três propriedades:
+        - flex-grow: 1;
+        - flex-shrink: 1;
+        - flex-basis: 300px;
+    */
+    flex: 1 1 300px;
+    
 }
 
+/*
+    Anotações:
+
+    Tiver um pouco de dificuldade em entender, começa a pensar no conceito de colunas
+
+*/
+
+
+.article-01 {
+    /* 
+        order; serve para alterar as ordens dos itens 
+    */
+
+    /* o article 1 irá ocupar 3 vezes mais o espaço extra do que os outros itens  */
+  flex-shrink: 3;
+    
+}
+.article-02 {
+    
+    /* 
+        align-self; serve pra defini alinhamento individual do item 
+        - center; fez um alinhamento vertical no centro
+        - valor padrão é o auto que vai respeitar o que for definido dentro do algin-item no container
+        
+        flex-end | baseline | center | flex-start | strecth | auto
+    */
+    
+    
+}
+.article-03 {
+  
+}
+.article-04 {
+ 
+}

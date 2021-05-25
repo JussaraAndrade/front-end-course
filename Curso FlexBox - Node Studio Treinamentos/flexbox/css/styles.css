@@ -1,0 +1,92 @@
+.container {
+    background-color: #ccc;
+    height: 500px;
+    /*Defini um container como flex */
+    display: flex;
+
+/*==============================================================================================*/
+    /* 
+        Por padrão ele assume row.
+        - row (valor padrão); defini em linha
+        - column; defini em coluna
+        - row-reverse; defini os itens em linha só de forma reversa
+        - column-reverse; defini em coluna só que em ordem reversa
+
+        column | row-reverse | column-reverse | row
+    */
+    /*Defini a direção dos itens.*/
+    flex-direction: row;
+
+/*==============================================================================================*/
+    
+/*Defini se os itens vão ter uma quebra de linha ou não
+        - nowrap (valor padrão); não permite quebra de linha
+        - wrap; permite quebra de linha
+        - wrap-reverse; vai permitir quebra de linha vai rederizar de forma reversa
+
+        nowrap | wrap | wrap-reverse
+    */
+    flex-wrap: wrap;
+
+/*==============================================================================================*/
+    /*Defini os valores flex-direction e do flex-wrap */
+    /* flex-flow: row nowrap; */
+
+/*==============================================================================================*/
+    /*
+    Alinhamento horizontal
+        
+    - flex-start (valor padrão); vai alinhar os itens da esquerda pra direta
+    - flex-end; vai alinhar os itens da direta pra esquerda
+    - center; alinha os itens no centro
+    - space-between; vai criar um espaçamento entre os itens
+    - space-around; cria um espaçamento entre eles, só que eles cria 
+    espaçamento iguais incluse nos itens que estão nas extremidades.
+
+    flex-end | center | space-between | space-around | flex-start
+    */
+    justify-content: flex-start;
+
+/*==============================================================================================*/
+
+    /* É responsavel em fazer um alinhamento vertical 
+        - stretch (valor padrão); defini que os itens cresçam igualmente.
+        - flex-start; vai alinhar os itens no topo, ele faz um alinhamento vertical.
+        - flex-end; vai alinhar os itens na base do container.
+        - center; vai alinhar os itens no centro do container
+        - baseline; vai fazer o alinhamento vertical, baseado no conteúdo de cada item
+
+        flex-start | flex-end | center | baseline | stretch
+    */
+    align-items: stretch;
+/*==============================================================================================*/
+    /*
+        Fazer um alinhamento vertical
+
+        Lembrando - ele vai fazer um alinhamento vertical quando itens estiverem em multi-line,
+        ou seja, quando tiver uma quebra.
+
+        - flex-start; vai fazer alinhamento vertical dos itens mesmo com a quebra de linha, vai
+        fazer o alinhamento na parte de cima do container.
+        - flex-end; vai fazer um alinhamento na base. 
+        - center; vai fazer um alinhamento centralizado
+        - space-between; vai adicionar um espaçamento entre as linhas
+        - space-around; vai criar os mesmos espaçamentos, vai adicionar espaçamento na parte superior e na base
+        - stretch; é um valor padrão faz com que os itens cresça igualmente na vertical 
+
+        flex-start | flex-end | center | space-between | space-around | stretch
+
+        Obs: para o stretch funcionar tem que remover altura do item: height: 30px;
+    */
+    align-content: stretch;
+
+}
+
+.item {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 5px;
+    width: 200px;
+}
+
